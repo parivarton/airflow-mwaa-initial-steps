@@ -76,6 +76,10 @@ class ReviewManager:
 
 review_manager = ReviewManager()
 
+@app.get("/")
+def healthcheck():
+    return {'message':'API is healthy'}
+
 @app.post("/reviews/")
 async def create_review(customer_id: int, product_id: int, review: str, rating: int):
     review_time = datetime.now().timestamp()
