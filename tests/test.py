@@ -15,9 +15,9 @@ def test_create_review():
             "rating": 5
         },
     )
-    print(response)
-    #assert response.status_code == 200
-    #assert response.json() == {"message": "Review added successfully"}
+    #print(response)
+    assert response.status_code == 200
+    assert response.json() == {"message": "Review added successfully"}
 
 def test_get_product_review_stats():
     # Test getting product review stats
